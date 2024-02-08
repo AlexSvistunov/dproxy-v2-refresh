@@ -20,16 +20,7 @@ workRowImgs.forEach((workRowImg) => {
 
     `;
     } else {
-      const currentImg = e.currentTarget;
-      const picture = currentImg.closest('picture')
-      const source = picture.querySelector('source')
-      const sourceSrc = source.srcset
-      workModal.classList.add("work__modal--active");
-      workModal.querySelector(".work__modal-inner").innerHTML = `
-    <img loading="lazy" src="${sourceSrc}" class="work__row-img--mob"
-    alt="покупка прокси в телеграме">
-
-    `;
+      return false
     }
   });
 });
